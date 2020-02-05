@@ -3,3 +3,8 @@
  * purpose: styles, animation etc
  * further development: meyer reset perhaps?
  **/
+img {
+    height: auto;
+    width: 300px;
+    border-radius: 30%;
+}

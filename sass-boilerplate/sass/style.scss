@@ -1,13 +1,35 @@
 /*! important: the styles are compiled via the sass/style.scss file */
 
+
+
 /* variables  (not shown in css) - or from style to real code! */
 /* selected colors for this project */
 $green: #1cc867;
 $white: #fff;
+$blue: #0000ff;
+$cta: #ff0000;
 
 /* nested syntax, how cool is that? */
 
-/* mixins */ 
+/* mixins */
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+.box {
+    width: 99px;
+    height: 99px;
+    background-color: $blue;
+    position: relative;
+    @include transform(rotate(30deg));
+}
+
+#box2 {
+    background-color: crimson;
+    @include transform(rotate(144deg));
+}
 
 /* scss samples */
 body {
@@ -18,8 +40,15 @@ body {
 /* nested syntax */
 main {
     p {
-        color: $white;
+        color: $blue;
+        background-color: $green;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
 
-
+a {
+    color: $cta;
+}
